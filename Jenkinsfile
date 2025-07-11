@@ -45,7 +45,7 @@ pipeline {
                 sh '''
                     docker stop webapp || true
                     docker rm webapp || true
-                    docker run -d --name webapp -p 8080:8080 adarshbalaji10/webapp:v1
+                    docker run -d --name webapp -p 8081:8080 adarshbalaji10/webapp:v1
                 '''
             }
         }
