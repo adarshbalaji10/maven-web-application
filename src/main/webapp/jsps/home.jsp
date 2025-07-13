@@ -1,58 +1,59 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Adarsh Balaji - CI/CD WebApp</title>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies</h1>
-<h1 align="center">Phone Number: +91 9980923216</h1>
-<h1 align="center">Mithun Technologies is a Very Good Training Center for DevOps, Cloud, Kubernetes and Terraform</h1>
+    <h1 align="center">🚀 Welcome to My CI/CD Pipeline Web Application</h1>
+    <h2 align="center">Built & Deployed by Adarsh Balaji</h2>
+    <h3 align="center">DevOps Tools: Jenkins | Maven | Docker | AWS EC2</h3>
 
-<h1 align="center">Trainer Name: Bhaskar Reddy Lacchannagari</h1>
+    <hr><br>
 
-<hr>
-<br>
-	<h1><h3> Server Side IP Address </h3><br>
+    <h2>🌐 Server Side IP Address</h2>
+    <%
+        String ip = "";
+        InetAddress inetAddress = InetAddress.getLocalHost();
+        ip = inetAddress.getHostAddress();
+        out.println("Server Host Name :: " + inetAddress.getHostName());
+    %>
+    <br>
+    <%
+        out.println("Server IP Address  :: " + ip);
+    %>
 
-<% 
-String ip = "";
-InetAddress inetAddress = InetAddress.getLocalHost();
-ip = inetAddress.getHostAddress();
-out.println("Server Host Name :: "+inetAddress.getHostName()); 
-%>
-<br>
-<%out.println("Server IP Address  :: "+ip);%>
-</h1>
-<br>
-<h1><h3> Client Side IP Address </h3><br>
-<%out.print( "Client IP Address  :: "+request.getRemoteAddr()); %><br>
-<%out.print( "Client Name Host :: "+request.getRemoteHost() );%><br></h1>
-<hr>
-<div style="text-align: center;">
-	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Marathahalli,
-		Bengaluru,
-		+91 9980923216 and 
-		Devopstrainingblr@Gmail.com
-		<br>
-		<a href="mailto:Devopstrainingblr@Gmail.com">Mail to Mithun Technologies</a>
-	</span>
-</div>
-<hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
-<hr>
-<p align=center>Mithun Technologies - Consultant, Training and Development Center.</p>
-<p align=center><small>Copyrights 2025 by <a href="http://mithuntechnologies.com/">Mithun Technologies,Bengaluru</a> </small></p>
+    <br><br>
 
+    <h2>🖥️ Client Side IP Address</h2>
+    <%
+        out.print("Client IP Address  :: " + request.getRemoteAddr());
+        out.print("<br>");
+        out.print("Client Name Host   :: " + request.getRemoteHost());
+    %>
+
+    <hr>
+
+    <div style="text-align: center; font-weight: bold;">
+        This web application was developed by <strong>Adarsh Balaji</strong> as part of a CI/CD pipeline demo project.
+        <br><br>
+        Tools Used: Jenkins | Maven | Docker | AWS EC2
+        <br><br>
+        📧 Email: <a href="mailto:adarsh.balaji10@gmail.com">adarsh.balaji10@gmail.com</a>
+    </div>
+
+    <hr>
+
+    <p style="text-align: center;">
+        ▶️ Service Endpoint: <a href="services/employee/getEmployeeDetails">Get Employee Details</a>
+    </p>
+
+    <hr>
+    <p align="center">© 2025 Adarsh Balaji — DevOps Engineer | Bengaluru</p>
+    <p align="center">
+        <small>LinkedIn: <a href="https://www.linkedin.com/in/adarshbalajip/" target="_blank">https://www.linkedin.com/in/adarshbalajip/</a></small>
+    </p>
 </body>
 </html>
